@@ -21,7 +21,7 @@ namespace JKEMVC.Controllers
                 var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
                 var message = new MailMessage();
                 message.To.Add(new MailAddress("mvctest@cool.dk"));  // replace with valid value 
-                message.From = new MailAddress("casp.mad@gmail.com");  // replace with valid value
+                message.From = new MailAddress("mvctest@cool.dk");  // replace with valid value
                 message.Subject = "Your email subject";
                 message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
                 message.IsBodyHtml = true;
@@ -30,11 +30,11 @@ namespace JKEMVC.Controllers
                 {
                     var credential = new NetworkCredential
                     {
-                        UserName = "casp.mad@gmail.com",  // replace with valid value
+                        UserName = "mvctest@cool.dk",  // replace with valid value
                         Password = "Frants123"  // replace with valid value
                     };
                     smtp.Credentials = credential;
-                    smtp.Host = "smtp.gmail.com";
+                    smtp.Host = "smtp.jubii.dk";
                     smtp.Port = 587;
                     smtp.EnableSsl = true;
                     await smtp.SendMailAsync(message);

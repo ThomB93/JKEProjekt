@@ -32,7 +32,7 @@ namespace JKEMVC.Controllers
                 smtp.Port = 587;
                 smtp.UseDefaultCredentials = false;
                 smtp.Credentials = new System.Net.NetworkCredential
-                ("cahomad", "Meloncat8");// Enter seders User name and password
+                ("sdsd", "sdsdsd");// Enter seders User name and password
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
                 return View("Index", _objModelMail);

@@ -55,7 +55,7 @@ namespace JKEMVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Hvem er vi?";
 
             return View();
         }

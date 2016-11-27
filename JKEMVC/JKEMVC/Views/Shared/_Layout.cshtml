@@ -25,8 +25,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="@Url.Action("Index", "Home")" class="elements"><span>Forside</span></a></li>
-                    <li><a href="@Url.Action("About", "Home")" class="elements"><span>Hvem er vi?</span></a></li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("Forside", "Index", "Home")</li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")">@Html.ActionLink("Hvem er vi?", "About", "Home")</li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Produkter <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -43,8 +43,8 @@
                     <button type="submit" class="btn btn-default">Søg</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="@Url.Action("Contact", "Home")" class="elements"><span>Kontakt</span></a></li>
-                    <li><a href="@Url.Action("Links", "Home")" class="elements"><span>Links</span></a></li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")">@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Links" ? "active" : "")">@Html.ActionLink("Links", "Links", "Home")</li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

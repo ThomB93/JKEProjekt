@@ -13,11 +13,16 @@ namespace JKEMVC.Models
 {
     public class EmailFormModel
     {
-        [Required, Display(Name = "Your name")]
+        [Required, Display(Name = "Navn")]
         public string FromName { get; set; }
-        [Required, Display(Name = "Your email"), EmailAddress]
+
+        [Required, Display(Name = "Email"), EmailAddress]
         public string FromEmail { get; set; }
-        [Required]
+
+        [Required, Display(Name = "Tlf")]
+        public string FromTlf { get; set; }
+
+        [Required, Display(Name = "Besked")]
         public string Message { get; set; }
     }
 }

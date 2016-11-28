@@ -18,12 +18,12 @@ namespace JKEMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
+                var body = "<p><b>Email fra:</b> {0} ({1})({2})</p><p><b>Besked:</b> </p><p>{3}</p>";
                 var message = new MailMessage();
                 message.To.Add(new MailAddress("mvctest@cool.dk"));  // replace with valid value 
                 message.From = new MailAddress("mvctest@cool.dk");  // replace with valid value
-                message.Subject = "Your email subject";
-                message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
+                message.Subject = "Book et møde";
+                message.Body = string.Format(body, model.FromName, model.FromEmail, model.FromTlf, model.Message);
                 message.IsBodyHtml = true;
 
                 using (var smtp = new SmtpClient())

@@ -66,12 +66,7 @@ namespace JKEMVC.Controllers
 
             return View();
         }
-        public ActionResult Products()
-        {
-            ViewBag.Message = "Your product page";
-
-            return View();
-        }
+        
         public ActionResult Links()
         {
             ViewBag.Message = "Your links page";

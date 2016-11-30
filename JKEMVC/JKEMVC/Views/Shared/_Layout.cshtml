@@ -40,7 +40,7 @@
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Søg efter produkter...">
                     </div>
-                    <button type="submit" class="btn btn-default">Søg</button>
+                    <button type="submit" class="btn btn-primary">Søg</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")">@Html.ActionLink("Kontakt", "Contact", "Home")</li>

@@ -42,6 +42,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Søg</button>
                 </form>
+
                 <ul class="nav navbar-nav navbar-right">
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")">@Html.ActionLink("Kontakt", "Contact", "Home")</li>
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Links" ? "active" : "")">@Html.ActionLink("Links", "Links", "Home")</li>
@@ -53,7 +54,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - JKE-Design Kolding - Postadresse: Albuen 9, 6000 Kolding - Telefon: 76322600 - Mail: jke.kolding.dk</p>
+            <p>&copy; @DateTime.Now.Year - JKE-Design Kolding - Postadresse: Albuen 9, 6000 Kolding - Telefon: 76322600 - Mail: jke.kolding.dk - Åbningstider: Man-fredag: 10.00-17.00 Lørdag: 10.00-14.00</p>
         </footer>
     </div>
 

@@ -53,7 +53,7 @@ namespace JKEMVC.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult HvemErVi()
         {
             ViewBag.Message = "Hvem er vi?";
 

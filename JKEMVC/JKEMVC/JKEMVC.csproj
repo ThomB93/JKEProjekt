@@ -234,9 +234,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Info_om_os.cshtml">
-      <BrowseToURL>~/Home/Info_om_os</BrowseToURL>
-    </Content>
     <Content Include="Views\Home\Send_en_besked.cshtml">
       <BrowseToURL>~/Home/Send_en_besked</BrowseToURL>
     </Content>
@@ -266,6 +263,7 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Home\Kontakt_information.cshtml" />
+    <Content Include="Views\Home\Info_om_os.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

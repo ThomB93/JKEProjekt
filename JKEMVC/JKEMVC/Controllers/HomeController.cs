@@ -58,7 +58,7 @@ namespace JKEMVC.Controllers
 
         public ActionResult Info_om_os()
         {
-            ViewBag.Message = "Info om os?";
+            ViewBag.Message = "Info om os";
 
             return View();
         }

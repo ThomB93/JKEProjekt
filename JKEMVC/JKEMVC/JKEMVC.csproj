@@ -234,10 +234,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\HvemErVi.cshtml">
-      <BrowseToURL>~/Home/HvemErVi</BrowseToURL>
+    <Content Include="Views\Home\Info_om_os.cshtml">
+      <BrowseToURL>~/Home/Info_om_os</BrowseToURL>
     </Content>
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Send_en_besked.cshtml">
+      <BrowseToURL>~/Home/Send_en_besked</BrowseToURL>
+    </Content>
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -263,6 +265,7 @@
     <Content Include="Views\Home\Sent.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Views\Home\Kontakt_information.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

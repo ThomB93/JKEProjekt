@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using JKEMVC.Models;
+﻿using JKEMVC.Models;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace JKEMVC.Controllers
 {
@@ -53,20 +49,26 @@ namespace JKEMVC.Controllers
             return View();
         }
 
-        public ActionResult HvemErVi()
+        public ActionResult Kontakt_information()
         {
-            ViewBag.Message = "Hvem er vi?";
+            ViewBag.Message = "Kontakt information";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Info_om_os()
+        {
+            ViewBag.Message = "Info om os?";
+
+            return View();
+        }
+        public ActionResult Send_en_besked()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
-        
+
         public ActionResult Links()
         {
             ViewBag.Message = "Your links page";

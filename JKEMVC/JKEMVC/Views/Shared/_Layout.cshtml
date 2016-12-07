@@ -36,10 +36,7 @@
                     </li>
                 </ul>
                 <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Søg efter produkter...">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Søg</button>
+                    
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Send_en_besked" ? "active" : "")">@Html.ActionLink("Send os en besked", "Send_en_besked", "Home")</li>

@@ -1,20 +1,52 @@
 ﻿@{
     ViewBag.Title = "Info om os";
 }
+<h2>Info om vores butik i Kolding</h2>
 <div class="row">
-    <div class="col-md-6">
-        <h3>@ViewBag.Message</h3>
-        <p>Vi er JKE-design Kolding. Vores navn Carsten Madsen og og Steen Christensen omkring os (info om virksomhed hvornår de startede)</p>
-        <div class="col-md-6">
-            <label> Mit navn er Carsten Madsen om mig (arbejdet i virksomheden x år f.eks. erfering inde for køkkenbranchen)......
-            <br /> du kan kontakte mig på: <br />telefonnummer: 25785583 <br /> eller på mail: cm@jke-kolding.com    </label>
-        </div>
-        <div class="col-md-6">
-            <label>  mit navn er Steen Christensen om mig (arbejdet i virksomheden x år f.eks. erfering inde for køkkenbranchen)..... 
-            <br /> du kan kontakte mig på: <br /> telefonnummer: 25785593 <br /> eller på mail: sc@jke-kolding.com</label>
-        </div>
+    <div id="myCarousel" class="carousel slide col-md-8 row top-buffer" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="http://placehold.it/800x600/cccccc/ffffff">
+                
+            </div><!-- End Item -->
+            <div class="item">
+                <img src="http://placehold.it/800x600/999999/cccccc">
+                
+            </div><!-- End Item -->
+            <div class="item">
+                <img src="http://placehold.it/800x600/dddddd/333333">
+                
+            </div><!-- End Item -->
+        </div><!-- End Carousel Inner -->
+        <ul class="list-group col-md-3 carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ul>
     </div>
-    <div class="col-md-6">
-        <h3>Sociale medier...</h3>
+    <div class="col-md-4">
+        <h3>Om os</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
+        <div class="col-md-4">
+            <a href="https://www.facebook.com/JKE-Design-AS-191716800839088/">
+                <img src="~/Content/Images/1481143932_facebook.png" height="30" />                
+            </a>
+            <p>JKE Designs facebook</p>
+            </div>
+        <div class="col-md-4">
+            <a href="https://www.instagram.com/jkedesignas/">
+                <img src="~/Content/Images/Instagram-v051916_200.png" height="30" />
+            </a>
+            <p>JKE Designs instagram</p>
         </div>
-    </div>
+        <div class="col-md-4">
+            <a href="https://dk.pinterest.com/jkedesign/">
+                <img src="~/Content/Images/pinterest.png" height="30" />
+            </a>
+            <p>JKE Designs pinterest</p>
+        </div>
+        </div>
+</div>

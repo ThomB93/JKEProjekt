@@ -4592,6 +4592,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse {
   background-color: #000;
   border-color: #080808;
+  
 }
 .navbar-inverse .navbar-brand {
   color: #fff;
@@ -4602,15 +4603,17 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
-  color: #fff;
+    color: #fff;
 }
 .navbar-inverse .navbar-nav > li > a {
   color: #9d9d9d;
+  text-decoration: solid;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #fff;
   background-color: transparent;
+  text-decoration: solid;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
@@ -5487,6 +5490,7 @@ button.list-group-item-danger.active:focus {
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  text-align: center; 
 }
 .panel > .list-group,
 .panel > .panel-collapse > .list-group {
@@ -5986,6 +5990,9 @@ button.close {
   .modal-lg {
     width: 900px;
   }
+}
+.btn-space {
+    margin-top: 5px;
 }
 .tooltip {
   position: absolute;

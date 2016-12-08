@@ -76,5 +76,11 @@ namespace JKEMVC.Controllers
 
             return View();
         }
+        public ActionResult Finansiering()
+        {
+            ViewBag.Message = "Finansiering";
+
+            return View();
+        }
     }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JKE-Design Kolding</title>
+    <title>JKE Design Kolding</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -41,6 +41,7 @@
                     
                 </form>
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Finansiering" ? "active" : "")">@Html.ActionLink("Finansiering", "Finansiering", "Home")</li>
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Send_en_besked" ? "active" : "")">@Html.ActionLink("Send os en besked", "Send_en_besked", "Home")</li>
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Links" ? "active" : "")">@Html.ActionLink("Vores samarbejdspartnere", "Links", "Home")</li>
                 </ul>

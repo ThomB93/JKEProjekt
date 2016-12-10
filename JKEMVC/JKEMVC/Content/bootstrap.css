@@ -234,6 +234,7 @@ th {
   h3 {
     orphans: 3;
     widows: 3;
+    overflow-wrap:break-word;
   }
   h2,
   h3 {
@@ -1270,6 +1271,8 @@ h1,
 h2,
 .h2 {
   font-size: 30px;
+  overflow-wrap:break-word;
+  white-space: normal;
 }
 h3,
 .h3 {
@@ -1289,6 +1292,8 @@ h6,
 }
 p {
   margin: 0 0 10px;
+  overflow-wrap:break-word;
+  white-space: normal;
 }
 .lead {
   margin-bottom: 20px;

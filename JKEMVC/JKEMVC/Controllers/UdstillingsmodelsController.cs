@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -20,6 +21,7 @@ namespace JKEMVC.Controllers
         {
             return View(db.Udstillingsmodels.ToList());
         }
+        
 
         // GET: Udstillingsmodels/Details/5
         public ActionResult Details(int? id)
@@ -47,10 +49,31 @@ namespace JKEMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,titel,beskrivelse,billedeSti")] Udstillingsmodel udstillingsmodel)
+        public ActionResult Create(Udstillingsmodel udstillingsmodel, HttpPostedFileBase image)
         {
             if (ModelState.IsValid)
             {
+                //upload image
+                if (image != null && image.ContentLength > 0)
+                {
+                    try
+                    {
+                        //Here, I create a custom name for uploaded image
+                        string file_name = udstillingsmodel.titel + Path.GetExtension(image.FileName);
+
+                        string path = Path.Combine(Server.MapPath("~/Content/Images"), file_name);
+                        image.SaveAs(path);
+
+                        // image_path is nvarchar type db column. We save the name of the file in that column. 
+                        udstillingsmodel.billedeSti = "~/Content/Images" + "/" + file_name;
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                }
+
+
                 db.Udstillingsmodels.Add(udstillingsmodel);
                 db.SaveChanges();
                 return RedirectToAction("Index");

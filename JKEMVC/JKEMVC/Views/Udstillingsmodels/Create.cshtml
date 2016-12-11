@@ -8,7 +8,7 @@
 <h2>Opret</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create", "Udstillingsmodels", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
@@ -41,9 +41,8 @@
                 <p><b>Billede:</b></p>
             </div>
             <div class="col-md-10">
-                <input type="file" accept="image/png, image/jpeg, image/gif" name="image" />
-                @Html.EditorFor(model => model.billedeSti, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.billedeSti, "", new { @class = "text-danger" })
+                <input type="file" title="Vælg billede" accept="image/png, image/jpeg, image/gif" name="image" id="image"/>
+                                                                               
             </div>
         </div>
 
@@ -56,7 +55,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Gå tilbage", "Index")
 </div>
 
 @section Scripts {

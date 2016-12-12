@@ -8,7 +8,10 @@
 <h2>Udstillingsmodeller</h2>
 
 <p>
-    @Html.ActionLink("Opret", "Create")
+    @if (User.IsInRole("admin"))
+    {
+        @Html.ActionLink("Opret", "Create")
+    }
 </p>
 <table class="table">
     <tr>
@@ -24,46 +27,52 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.titel)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.beskrivelse)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.billedeSti)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.titel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.beskrivelse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.billedeSti)
+            </td>
+            <td>
+                @if (User.IsInRole("admin"))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                }
+                @if (User.IsInRole("admin"))
+                {
+                    @Html.ActionLink("Details", "Details", new { id = item.ID })
+                }
+                @if (User.IsInRole("admin"))
+                {
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                }
+            </td>
+        </tr>
+    }
 
 </table>
 
 <div class="container">
     <div class="row">
         <ul class="thumbnails list-unstyled">
-@foreach (var item in Model)
-{
-            <li class="col-md-3">
-                <div class="thumbnail" style="padding: 0">
-                    <div style="padding:4px">
-                        <img src="@Html.DisplayFor(modelItem => item.billedeSti)" alt="300x250" style="width: 100%"/>
-                    </div>
+            @foreach (var item in Model)
+            {
+                <li class="col-md-3">
+                    <div class="thumbnail" style="padding: 0">
+                        <div style="padding:4px">
+                            <img src="@Html.DisplayFor(modelItem => item.billedeSti)" alt="300x250" style="width: 100%" />
+                        </div>
                         <h2 class="text-center">@Html.DisplayFor(modelItem => item.titel)</h2>
                         <p class="text-center">@Html.DisplayFor(modelItem => item.beskrivelse)</p>
-                </div>
-            </li> 
-}
+                    </div>
+                </li>
+            }
         </ul>
     </div>
 </div>
-
-
-
-

@@ -21,7 +21,7 @@ namespace JKEMVC.Controllers
         {
             return View(db.Udstillingsmodels.ToList());
         }
-        
+
 
         // GET: Udstillingsmodels/Details/5
         public ActionResult Details(int? id)
@@ -39,6 +39,7 @@ namespace JKEMVC.Controllers
         }
 
         // GET: Udstillingsmodels/Create
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             return View();
@@ -65,7 +66,7 @@ namespace JKEMVC.Controllers
                         image.SaveAs(path);
 
                         // image_path is nvarchar type db column. We save the name of the file in that column. 
-                        udstillingsmodel.billedeSti = "~/Content/Images" + "/" + file_name;
+                        udstillingsmodel.billedeSti = "/Content/Images" + "/" + file_name;
                     }
                     catch (Exception ex)
                     {
@@ -83,6 +84,7 @@ namespace JKEMVC.Controllers
         }
 
         // GET: Udstillingsmodels/Edit/5
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -100,6 +102,7 @@ namespace JKEMVC.Controllers
         // POST: Udstillingsmodels/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,titel,beskrivelse,billedeSti")] Udstillingsmodel udstillingsmodel)
@@ -114,6 +117,7 @@ namespace JKEMVC.Controllers
         }
 
         // GET: Udstillingsmodels/Delete/5
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

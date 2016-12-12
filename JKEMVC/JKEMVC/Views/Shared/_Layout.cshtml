@@ -46,6 +46,7 @@
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Send_en_besked" ? "active" : "")">@Html.ActionLink("Send os en besked", "Send_en_besked", "Home")</li>
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Links" ? "active" : "")">@Html.ActionLink("Vores samarbejdspartnere", "Links", "Home")</li>
                 </ul>
+                @Html.Partial("_LoginPartial")
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>

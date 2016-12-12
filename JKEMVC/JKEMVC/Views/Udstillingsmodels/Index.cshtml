@@ -13,50 +13,44 @@
         @Html.ActionLink("Opret", "Create")
     }
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.titel)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.beskrivelse)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.billedeSti)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var item in Model)
-    {
+@if (User.IsInRole("admin"))
+{
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.titel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.beskrivelse)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.billedeSti)
-            </td>
-            <td>
-                @if (User.IsInRole("admin"))
-                {
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                }
-                @if (User.IsInRole("admin"))
-                {
-                    @Html.ActionLink("Details", "Details", new { id = item.ID })
-                }
-                @if (User.IsInRole("admin"))
-                {
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                }
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.titel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.beskrivelse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.billedeSti)
+            </th>
+            <th></th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.titel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.beskrivelse)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.billedeSti)
+                </td>
+                <td>
+                        @Html.ActionLink("Redigér", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Slet", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+    </table>
+}
+
 
 <div class="container">
     <div class="row">
